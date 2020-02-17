@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\.cxx\\cmake\\qaRelease\\arm64-v8a\" --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-arm64-v8a": {
+      "artifactName": "native-lib",
+      "buildCommand": "C:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\.cxx\\cmake\\qaRelease\\arm64-v8a\" --target native-lib",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\build\\intermediates\\cmake\\qaRelease\\obj\\arm64-v8a\\libnative-lib.so"
+    },
+    "libnode-Release-arm64-v8a": {
+      "artifactName": "libnode",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\libnode\\bin\\arm64-v8a\\libnode.so"
+    }
+  }
+}
