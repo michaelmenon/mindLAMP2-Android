@@ -37,6 +37,10 @@
   },
   {
     "level": "INFO",
+    "message": "deleted unexpected build output C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\build\\intermediates\\cmake\\betaRelease\\obj\\arm64-v8a\\libc++_shared.so in incremental regenerate"
+  },
+  {
+    "level": "INFO",
     "message": "write command file C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\.cxx\\cmake\\betaRelease\\arm64-v8a\\build_command.txt"
   },
   {

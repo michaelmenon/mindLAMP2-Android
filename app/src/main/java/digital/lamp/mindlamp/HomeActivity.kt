@@ -93,13 +93,11 @@ class HomeActivity : AppCompatActivity() {
                 // Initialize the map with both permissions
                 perms[Manifest.permission.READ_CALENDAR] = PackageManager.PERMISSION_GRANTED
                 perms[Manifest.permission.CAMERA] = PackageManager.PERMISSION_GRANTED
-                perms[Manifest.permission.READ_SMS] = PackageManager.PERMISSION_GRANTED
                 perms[Manifest.permission.READ_CONTACTS] = PackageManager.PERMISSION_GRANTED
                 perms[Manifest.permission.ACCESS_FINE_LOCATION] = PackageManager.PERMISSION_GRANTED
                 perms[Manifest.permission.READ_EXTERNAL_STORAGE] = PackageManager.PERMISSION_GRANTED
                 perms[Manifest.permission.READ_SYNC_SETTINGS] = PackageManager.PERMISSION_GRANTED
                 perms[Manifest.permission.READ_SYNC_STATS] = PackageManager.PERMISSION_GRANTED
-                perms[Manifest.permission.READ_CALL_LOG] = PackageManager.PERMISSION_GRANTED
 
                 if (grantResults.isNotEmpty()) {
                     for (i in permissions.indices)
@@ -107,13 +105,11 @@ class HomeActivity : AppCompatActivity() {
                     // Check for both permissions
                     if (perms[Manifest.permission.READ_CALENDAR] == PackageManager.PERMISSION_GRANTED
                         && perms[Manifest.permission.CAMERA] == PackageManager.PERMISSION_GRANTED
-                        && perms[Manifest.permission.READ_SMS] == PackageManager.PERMISSION_GRANTED
                         && perms[Manifest.permission.READ_CONTACTS] == PackageManager.PERMISSION_GRANTED
                         && perms[Manifest.permission.ACCESS_FINE_LOCATION] == PackageManager.PERMISSION_GRANTED
                         && perms[Manifest.permission.READ_EXTERNAL_STORAGE] == PackageManager.PERMISSION_GRANTED
                         && perms[Manifest.permission.READ_SYNC_SETTINGS] == PackageManager.PERMISSION_GRANTED
                         && perms[Manifest.permission.READ_SYNC_STATS] == PackageManager.PERMISSION_GRANTED
-                        && perms[Manifest.permission.READ_CALL_LOG] == PackageManager.PERMISSION_GRANTED
                     ) {
                         initializeWebview()
                         //else any one or both the permissions are not granted
@@ -122,13 +118,11 @@ class HomeActivity : AppCompatActivity() {
                         //Now further we check if used denied permanently or not
                         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_CALENDAR)
                             || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)
-                            || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_SMS)
                             || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_CONTACTS)
                             || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)
                             || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                             || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_SYNC_SETTINGS)
                             || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_SYNC_STATS)
-                            || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_CALL_LOG)
                         ){
                             // case 4 User has denied permission but not permanently
                             showDialogOK("Service Permissions are required for this app",
@@ -216,14 +210,12 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun showSignedOut() {
-        Toast.makeText(this,"Logout Done",Toast.LENGTH_SHORT).show()
         AppState.session.clearData()
         stopLampService()
 
     }
 
     private fun showSignedIn(oLoginResponse: LoginResponse) {
-        Toast.makeText(this,"Login Done",Toast.LENGTH_SHORT).show()
 
         AppState.session.isLoggedIn = true
         AppState.session.token = oLoginResponse.authorizationToken

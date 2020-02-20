@@ -3,6 +3,15 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('key.jks')
+            storePassword 'v2lamp20*89'
+            keyAlias = 'key0'
+            keyPassword 'v2lamp20*89'
+        }
+    }
+
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
@@ -85,15 +94,15 @@ android {
         beta {
             dimension "tier"
             buildConfigField 'String', 'HOST', project.betaBaseUrl
-            versionCode 20190506
-            versionName "2.0.11"
+            versionCode 1
+            versionName "1.0"
         }
 
         prod {
             dimension "tier"
             buildConfigField 'String', 'HOST', project.prodBaseUrl
-            versionCode 20191009
-            versionName "2.1.4"
+            versionCode 1
+            versionName "1.0"
         }
 
     }

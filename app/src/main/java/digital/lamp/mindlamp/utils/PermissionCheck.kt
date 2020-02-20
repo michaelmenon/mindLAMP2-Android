@@ -15,13 +15,11 @@ object PermissionCheck {
     fun checkAndRequestPermissions(context: Activity) : Boolean  {
         val calenderPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_CALENDAR)
         val cameraPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
-        val smsPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_SMS)
         val contactPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_CONTACTS)
         val permissionLocation = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
         val readStorage = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE)
         val readSyncSettingPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_SYNC_SETTINGS)
         val readSyncStatPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_SYNC_STATS)
-        val readCallLogPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_CALL_LOG)
 
         val listPermissionsNeeded = ArrayList<String>()
 
@@ -30,9 +28,6 @@ object PermissionCheck {
         }
         if (cameraPermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.CAMERA)
-        }
-        if (smsPermission != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(Manifest.permission.READ_SMS)
         }
         if (contactPermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.READ_CONTACTS)
@@ -48,9 +43,6 @@ object PermissionCheck {
         }
         if (readSyncStatPermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.READ_SYNC_STATS)
-        }
-        if (readCallLogPermission != PackageManager.PERMISSION_GRANTED) {
-            listPermissionsNeeded.add(Manifest.permission.READ_CALL_LOG)
         }
         if (listPermissionsNeeded.isNotEmpty()) {
             ActivityCompat.requestPermissions(context, listPermissionsNeeded.toTypedArray(), REQUEST_ID_MULTIPLE_PERMISSIONS)
