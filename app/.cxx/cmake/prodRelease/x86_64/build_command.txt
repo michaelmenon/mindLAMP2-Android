@@ -5,7 +5,7 @@ arguments :
 -DANDROID_ABI=x86_64
 -DANDROID_PLATFORM=android-24
 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\amal.jofy\AndroidStudioProjects\Lamp V2\LAMP_POC_Android\app\build\intermediates\cmake\prodRelease\obj\x86_64
--DCMAKE_BUILD_TYPE=Release
+-DCMAKE_BUILD_TYPE=Debug
 -DANDROID_NDK=C:\AndroidNDK
 -DCMAKE_CXX_FLAGS=
 -DCMAKE_TOOLCHAIN_FILE=C:\AndroidNDK\build\cmake\android.toolchain.cmake

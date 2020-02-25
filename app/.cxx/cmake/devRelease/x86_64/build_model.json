@@ -41,7 +41,7 @@
     "objFolder": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\build\\intermediates\\cmake\\devRelease\\obj",
     "jsonFolder": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\.cxx\\cmake\\devRelease",
     "gradleBuildOutputFolder": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\.cxx\\cxx\\devRelease",
-    "isDebuggableEnabled": false,
+    "isDebuggableEnabled": true,
     "validAbiList": [
       "ARMEABI_V7A",
       "ARM64_V8A",

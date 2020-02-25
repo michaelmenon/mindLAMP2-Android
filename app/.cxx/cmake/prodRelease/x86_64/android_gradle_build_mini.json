@@ -6,16 +6,16 @@
     "C:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\.cxx\\cmake\\prodRelease\\x86_64\" --target clean"
   ],
   "libraries": {
-    "libnode-Release-x86_64": {
-      "artifactName": "libnode",
-      "abi": "x86_64",
-      "output": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\libnode\\bin\\x86_64\\libnode.so"
-    },
-    "native-lib-Release-x86_64": {
+    "native-lib-Debug-x86_64": {
       "artifactName": "native-lib",
       "buildCommand": "C:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build \"C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\.cxx\\cmake\\prodRelease\\x86_64\" --target native-lib",
       "abi": "x86_64",
       "output": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\build\\intermediates\\cmake\\prodRelease\\obj\\x86_64\\libnative-lib.so"
+    },
+    "libnode-Debug-x86_64": {
+      "artifactName": "libnode",
+      "abi": "x86_64",
+      "output": "C:\\Users\\amal.jofy\\AndroidStudioProjects\\Lamp V2\\LAMP_POC_Android\\app\\libnode\\bin\\x86_64\\libnode.so"
     }
   }
 }
